@@ -15,7 +15,7 @@ npm install --save-dev snowpack-plugin-replace
 add this plugin to your Snowpack config:
 
 **snowpack.config.js**
-```
+```javascript
 {
   plugins: [[
     'snowpack-plugin-replace',
