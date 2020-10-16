@@ -11,9 +11,6 @@ module.exports = function (snowpackConfig, pluginOptions) {
           return;
         }
 
-        if (typeof str === 'string') {
-          str = new RegExp(str, 'g');
-        }
         const replaceValue = item.to;
         contents = contents.replace(str, replaceValue);
       }

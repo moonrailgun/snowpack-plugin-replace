@@ -1,6 +1,6 @@
 {
   "name": "snowpack-plugin-replace",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "replace your code",
   "main": "index.js",
   "scripts": {
