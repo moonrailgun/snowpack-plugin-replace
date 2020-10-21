@@ -34,3 +34,5 @@ add this plugin to your Snowpack config:
 options:
 - from: `string` or `RegExp`
 - to: `string`
+- file: `string` **optional** specify file path. its should be a full path
+  > For Example: `require.resolve('./index.js')`
