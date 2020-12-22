@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/moonrailgun/snowpack-plugin-replace/issues"
   },
-  "homepage": "https://github.com/moonrailgun/snowpack-plugin-replace#readme"
+  "homepage": "https://github.com/moonrailgun/snowpack-plugin-replace#readme",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "path": "^0.12.7"
+  }
 }
