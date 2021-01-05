@@ -1,8 +1,5 @@
 # snowpack-plugin-replace
-replace your code
-
-
-## Usage
+A small snowpack plugin to replace code during the optimize step
 
 ### Install
 
@@ -20,6 +17,7 @@ add this plugin to your Snowpack config:
   plugins: [[
     'snowpack-plugin-replace',
     {
+      extensions: ['html'],
       list: [
         {
           from: 'process.env',
@@ -32,7 +30,6 @@ add this plugin to your Snowpack config:
 ```
 
 options:
+- extensions: what file extensions to perform the replace on
 - from: `string` or `RegExp`
 - to: `string`
-- file: `string` **optional** specify file path. its should be a full path
-  > For Example: `require.resolve('./index.js')`
