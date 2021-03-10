@@ -1,5 +1,5 @@
 # snowpack-plugin-replace
-replace your code
+Replace in your code.
 
 
 ## Usage
@@ -12,7 +12,7 @@ npm install --save-dev snowpack-plugin-replace
 
 ### Config
 
-add this plugin to your Snowpack config:
+Add this plugin to your Snowpack config:
 
 **snowpack.config.js**
 ```javascript
@@ -31,8 +31,10 @@ add this plugin to your Snowpack config:
 }
 ```
 
-options:
+Options:
 - from: `string` or `RegExp`
 - to: `string`
-- file: `string` **optional** specify file path. its should be a full path
+- file: `string` **optional** Specify file path. It should be a full path.
   > For Example: `require.resolve('./index.js')`
+- extensions: `string[]` **optional** Specify a list of extensions to limit which files should be replaced in.
+  - Defaults to `['.css', '.js', '.jsx', '.ts', '.tsx']`
