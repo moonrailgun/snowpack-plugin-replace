@@ -1,12 +1,12 @@
 const pkg = require('./package.json');
 
-const supportExt = ['.js', '.css']
-
 module.exports = function (snowpackConfig, pluginOptions) {
+  const exts = pluginOptions.extensions || ['.css', '.js', '.jsx', '.ts', '.tsx'];
+
   return {
     name: pkg.name,
     transform({ id, contents, fileExt }) {
-      if(!supportExt.includes(fileExt)) {
+      if (!exts.includes(fileExt)) {
         // Skip not support version
         return contents;
       }
@@ -14,7 +14,7 @@ module.exports = function (snowpackConfig, pluginOptions) {
       const list = pluginOptions.list || [];
       for (let item of list) {
         const file = item.file;
-        if(typeof file === 'string') {
+        if (typeof file === 'string') {
           // If specify file path. check it
           if(file !== id) {
             continue;
@@ -22,7 +22,7 @@ module.exports = function (snowpackConfig, pluginOptions) {
         }
 
         let str = item.from;
-        if(str === undefined || str === null) {
+        if (str === undefined || str === null) {
           continue;
         }
 
