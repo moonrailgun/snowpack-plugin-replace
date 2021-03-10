@@ -31,10 +31,12 @@ Add this plugin to your Snowpack config:
 }
 ```
 
-Options:
-- from: `string` or `RegExp`
-- to: `string`
-- file: `string` **optional** Specify file path. It should be a full path.
-  > For Example: `require.resolve('./index.js')`
+#### Options
 - extensions: `string[]` **optional** Specify a list of extensions to limit which files should be replaced in.
   - Defaults to `['.css', '.js', '.jsx', '.ts', '.tsx']`
+- list: List of replace-objects that can each have the following properties
+  - from: `string` or `RegExp`
+  - to: `string`
+  - file: `string` **optional** Specify file path. It should be a full path.
+    > For Example: `require.resolve('./index.js')`
+
