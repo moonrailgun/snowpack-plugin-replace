@@ -27,7 +27,11 @@ module.exports = function (snowpackConfig, pluginOptions) {
         }
 
         const replaceValue = item.to;
-        contents = contents.replace(str, replaceValue);
+        if (item.all) {
+          contents = contents.replaceAll(str, replaceValue);
+        } else {
+          contents = contents.replace(str, replaceValue);
+        }
       }
       return contents;
     },
